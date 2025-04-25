@@ -134,8 +134,8 @@ MIDDLEWARE = [
 ]
 
 # Enable cross-subdomain cookies
-SESSION_COOKIE_DOMAIN = '.localhost'
-CSRF_COOKIE_DOMAIN = '.localhost'
+
+
 
 
 

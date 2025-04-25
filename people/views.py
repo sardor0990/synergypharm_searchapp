@@ -72,6 +72,8 @@ def custom_login(request):
         if form.is_valid():
             user = form.get_user()
             login(request, user)
+
+            request.session.save()
             
             host = request.get_host().split('.')[0]
             

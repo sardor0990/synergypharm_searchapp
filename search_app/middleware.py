@@ -10,4 +10,5 @@ class SubdomainMiddleware:
         elif host == 'lists':
             request.urlconf = 'people.urls'  # Must match your app name
             
+          
         return self.get_response(request)

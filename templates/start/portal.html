@@ -1,7 +1,129 @@
-{% block content %}
-<div class="linktree">
-	{% for link in links %}
-	<a href="{{link.url}}" class="link-button">{{link.name}}</a>
-	asdasdasdas {% endfor %}
+{% extends "base.html" %} {% block content %}
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+	<!-- Financial Reports Block -->
+	<div
+		class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow"
+	>
+		<h2 class="text-xl font-bold mb-4 text-blue-700 border-b pb-2">
+			<i class="fas fa-file-invoice-dollar mr-2"></i>Financial Reports
+		</h2>
+		<ul class="space-y-2">
+			<li>
+				<a href="#" class="text-blue-600 hover:text-blue-800 hover:underline"
+					>Q1 2023 Report</a
+				>
+			</li>
+			<li>
+				<a href="#" class="text-blue-600 hover:text-blue-800 hover:underline"
+					>Q2 2023 Report</a
+				>
+			</li>
+			<li>
+				<a href="#" class="text-blue-600 hover:text-blue-800 hover:underline"
+					>Annual Statement</a
+				>
+			</li>
+			<li>
+				<a href="#" class="text-blue-600 hover:text-blue-800 hover:underline"
+					>Audit Documents</a
+				>
+			</li>
+		</ul>
+	</div>
+
+	<!-- Social Links Block -->
+	<div
+		class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow"
+	>
+		<h2 class="text-xl font-bold mb-4 text-green-700 border-b pb-2">
+			<i class="fas fa-users mr-2"></i>Social Links
+		</h2>
+		<ul class="space-y-2">
+			<li>
+				<a href="#" class="text-blue-600 hover:text-blue-800 hover:underline"
+					>Employee Portal</a
+				>
+			</li>
+			<li>
+				<a href="#" class="text-blue-600 hover:text-blue-800 hover:underline"
+					>Company Newsletter</a
+				>
+			</li>
+			<li>
+				<a href="#" class="text-blue-600 hover:text-blue-800 hover:underline"
+					>Team Chat</a
+				>
+			</li>
+			<li>
+				<a href="#" class="text-blue-600 hover:text-blue-800 hover:underline"
+					>HR Resources</a
+				>
+			</li>
+		</ul>
+	</div>
+
+	<!-- Company Links Block -->
+	<div
+		class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow"
+	>
+		<h2 class="text-xl font-bold mb-4 text-purple-700 border-b pb-2">
+			<i class="fas fa-building mr-2"></i>Company Links
+		</h2>
+		<ul class="space-y-2">
+			<li>
+				<a href="#" class="text-blue-600 hover:text-blue-800 hover:underline"
+					>Company Policy</a
+				>
+			</li>
+			<li>
+				<a href="#" class="text-blue-600 hover:text-blue-800 hover:underline"
+					>Organizational Chart</a
+				>
+			</li>
+			<li>
+				<a href="#" class="text-blue-600 hover:text-blue-800 hover:underline"
+					>Department Contacts</a
+				>
+			</li>
+			<li>
+				<a href="#" class="text-blue-600 hover:text-blue-800 hover:underline"
+					>Office Locations</a
+				>
+			</li>
+		</ul>
+	</div>
+
+	<!-- IT Department Block -->
+	<div
+		class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow"
+	>
+		<h2 class="text-xl font-bold mb-4 text-red-700 border-b pb-2">
+			<i class="fas fa-laptop-code mr-2"></i>IT Department
+		</h2>
+		<ul class="space-y-2">
+			<li>
+				<a href="#" class="text-blue-600 hover:text-blue-800 hover:underline"
+					>Help Desk</a
+				>
+			</li>
+			<li>
+				<a href="#" class="text-blue-600 hover:text-blue-800 hover:underline"
+					>System Status</a
+				>
+			</li>
+			<li>
+				<a href="#" class="text-blue-600 hover:text-blue-800 hover:underline"
+					>Software Downloads</a
+				>
+			</li>
+			<li>
+				<a
+					href="http://lists.synergypharm.org"
+					class="text-blue-600 hover:text-blue-800 hover:underline"
+					>Lists Portal</a
+				>
+			</li>
+		</ul>
+	</div>
 </div>
 {% endblock %}
