@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 import environ
+import os #25.04.2025
 
 
 env = environ.Env()
@@ -33,6 +34,8 @@ DEBUG = True
 LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/login/'
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage' #last added 25.04.2025
 
 ALLOWED_HOSTS = [
 	'localhost',
@@ -131,6 +134,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 	'search_app.middleware.SubdomainMiddleware',
+	"whitenoise.middleware.WhiteNoiseMiddleware", #last added 25.04.2025
 ]
 
 # Enable cross-subdomain cookies
@@ -163,6 +167,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static") #last added 25.04.2025
+]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
